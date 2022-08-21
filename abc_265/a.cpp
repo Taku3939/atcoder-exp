@@ -34,16 +34,13 @@ void print(const std::vector<T> &v) {
 }
 
 int main() {
-    string s;
-    cin >> s;
 
-    int result { 0 };
-
-    ////////////////////
-    // Write your code.
-    ////////////////////
-
-    cout << result << endl;
+    int x, y, n;
+    cin >> x >> y >> n;
+    if(y / 3 < x)
+        cout << (n / 3) * y + (n % 3) * x;
+    else
+        cout << n * x;
 
     return 0;
 }
