@@ -54,12 +54,8 @@ int main() {
     for (int i = 0; i < N - 1; ++i) {
         dp[i + 1] = dp[i] - a[i] + xy[i];
         // 0以下になるような移動はダメ
-        if (dp[i + 1] <= 0) {
-            for (int j = i + 1; j < N; ++j) {
-                dp[j] = -1;
-            }
+        if (dp[i + 1] <= 0)
             break;
-        }
     }
 
     if (dp[N - 1] > 0) cout << "Yes";
