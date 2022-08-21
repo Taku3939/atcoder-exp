@@ -14,37 +14,13 @@ cd $contest
 
 echo "Create files."
 
-# cpp file template
-template=$(cat <<EOS
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-int main() {
-    string s;
-    cin >> s;
-
-    int result { 0 };
-
-    ////////////////////
-    // Write your code.
-    ////////////////////
-    
-    cout << result << endl;
-
-    return 0;
-}
-EOS
-)
-
 filelist=("a" "b" "c" "d" "e" "f")
 
 # shellcheck disable=SC2068
 for file in ${filelist[@]}
 do
     touch ${file}.cpp
-    echo "$template" > ${file}.cpp
+    cat ../template.cpp >> ${file}.cpp
     echo "created file: ${file}.cpp"
 done
 

@@ -1,12 +1,9 @@
-﻿#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 using ll = long long;
-void print(const std::vector<int>& v)
-{
+
+void print(const std::vector<int> &v) {
     std::for_each(v.begin(), v.end(), [](int x) {
         std::cout << x << " ";
     });
@@ -20,12 +17,6 @@ size_t countDigits(T n) {
 
     tmp = to_string(n);
     return tmp.size();
-}
-
-bool compare(int a, int b) {
-    std::string tmp1 = std::to_string(a);
-    std::string tmp2 = std::to_string(b);
-    return tmp1[0] >= tmp2[0];
 }
 
 int main() {
@@ -67,7 +58,7 @@ int main() {
         }
     }
 
-    vector<int> three {0, 1, 2};
+    vector<int> three{0, 1, 2};
 
     ll answer = 0;
     do {
